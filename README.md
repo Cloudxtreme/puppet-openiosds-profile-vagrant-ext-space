@@ -1,1 +1,1 @@
-# puppet-openiosds-profile-vagrant-ext-space
+# puppet-openiosds-profile-vagrant-ext
