@@ -1,3 +1,5 @@
+if $ipaddr { $ipaddr = $ipaddr }
+else { $ipaddr = $ipaddress }
 openiosds::sdsagent {'sds-agent-0':
 }
 openiosds::namespace {'OPENIO':
@@ -10,12 +12,12 @@ openiosds::namespace {'OPENIO':
 openiosds::meta2 {'meta2-4':
   num            => '4',
   ns             => 'OPENIO',
-  ipaddress      => "${ipaddress_enp0s8}",
+  ipaddress      => "${ipaddr}",
   port           => "6000",
 }
 openiosds::rawx {'rawx-4':
   num            => '4',
   ns             => 'OPENIO',
-  ipaddress      => "${ipaddress_enp0s8}",
+  ipaddress      => "${ipaddr}",
   port           => "6001",
 }
